@@ -1,5 +1,14 @@
 package com.example.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+import java.util.List;
+
+@Getter
+@Setter
+@ToString
 public class User {
     private String login;
 
@@ -9,63 +18,33 @@ public class User {
 
     private String email;
 
-    private UserAddress address;
+    private List<UserAddress> address;
 
-    public User(String login, String firstName, String lastName, String email) {
+    public User(String login, String firstName, String lastName, String email, List<UserAddress> address) {
         this.login = login;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.address = address;
     }
 
     public String getLogin() {
         return login;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
-    }
-
     public String getFirstName() {
         return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
     }
 
     public String getLastName() {
         return lastName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public UserAddress getAddress() {
+    public List<UserAddress> getAddress() {
         return address;
-    }
-
-    public void setAddress(UserAddress address) {
-        this.address = address;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "login='" + login + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
-                ", address=" + address +
-                '}';
     }
 }

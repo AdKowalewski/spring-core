@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!--    <bean id="userAddress1" class="com.example.model.UserAddress">-->
+<!--        <constructor-arg value="Bialystok"/>-->
+<!--        <constructor-arg value="Poland"/>-->
+<!--        <constructor-arg value="Malmeda"/>-->
+<!--        <constructor-arg value="15-100"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="userAddress2" class="com.example.model.UserAddress">-->
+<!--        <constructor-arg value="Kleosin"/>-->
+<!--        <constructor-arg value="Poland"/>-->
+<!--        <constructor-arg value="xdxd"/>-->
+<!--        <constructor-arg value="12-345"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="userAddress3" class="com.example.model.UserAddress">-->
+<!--        <constructor-arg value="gdrtrter"/>-->
+<!--        <constructor-arg value="Partrtarta"/>-->
+<!--        <constructor-arg value="xattatrat"/>-->
+<!--        <constructor-arg value="54-321"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="user1" class="com.example.model.User">-->
+<!--        <constructor-arg value="BlacksmitH"/>-->
+<!--        <constructor-arg value="Adam"/>-->
+<!--        <constructor-arg value="Kowalewski"/>-->
+<!--        <constructor-arg value="adkowal777@gmail.com"/>-->
+<!--        <constructor-arg>-->
+<!--            <list>-->
+<!--                <ref bean="userAddress1"/>-->
+<!--                <ref bean="userAddress2"/>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="user2" class="com.example.model.User">-->
+<!--        <constructor-arg value="login"/>-->
+<!--        <constructor-arg value="Grzegorz"/>-->
+<!--        <constructor-arg value="Brzęczyszczykiewicz"/>-->
+<!--        <constructor-arg value="mail@gmail.com"/>-->
+<!--        <constructor-arg ref="userAddress3"/>-->
+<!--    </bean>-->
+
+<!--    <bean id="userDao" class="com.example.repository.UserDao">-->
+<!--        <constructor-arg>-->
+<!--            <list>-->
+<!--                <ref bean="user1"/>-->
+<!--                <ref bean="user2"/>-->
+<!--            </list>-->
+<!--        </constructor-arg>-->
+<!--    </bean>-->
+
+<!--    <bean id="userService" class="com.example.service.UserService">-->
+<!--        <property name="userDao" ref="userDao"/>-->
+<!--    </bean>-->
+
+    <context:annotation-config/>
+<!--    włączanie adnotacji^-->
+    <context:component-scan base-package="com.example"/>
 </beans>
